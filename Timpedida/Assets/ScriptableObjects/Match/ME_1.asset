@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35999d9183556f34da93c71be4d82303, type: 3}
+  m_Name: ME_1
+  m_EditorClassIdentifier: 
+  Question: Kennebunkport Surprise
+  Answer: "Hombre se llena la boca con sopa de almejas. Luego, mientras le practica
+    cunnilingus a una mujer, se golpea simult\xE1neamente ambas mejillas, haciendo
+    que la sopa de almejas salga disparada hacia la vagina de la mujer."
+  TermType: 2
