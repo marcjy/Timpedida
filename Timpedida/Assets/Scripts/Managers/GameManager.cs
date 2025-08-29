@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
@@ -5,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    public static event EventHandler OnStartGame;
+    public static event EventHandler OnEndGame;
+
     [Header("Data")]
     [SerializeField] private BaseQuizData[] _quizData;
 
@@ -39,6 +44,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator GameFlow()
     {
+        OnStartGame?.Invoke(this, EventArgs.Empty);
+
         while (true)
         {
             if (_hasOpenQuestions)
@@ -49,6 +56,8 @@ public class GameManager : MonoBehaviour
             if (!_hasOpenQuestions && !_hasMatchQuestions)
                 break;
         }
+
+        OnEndGame?.Invoke(this, EventArgs.Empty);
 
         SceneManager.LoadScene("End");
     }

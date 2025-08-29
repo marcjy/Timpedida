@@ -19,4 +19,5 @@ public class EndManager : MonoBehaviour
     }
 
     private void LoadMainMenu() => SceneManager.LoadScene("MainMenu");
+
 }

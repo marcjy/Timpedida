@@ -84,14 +84,16 @@ public class OpenQuestionManager : MonoBehaviour
 
     private void InitButtons()
     {
-        _visibilityButton.onClick.AddListener(() => ToggleAnswerVisibility());
+        _visibilityButton.onClick.AddListener(ToggleAnswerVisibility);
 
         _correctButton.onClick.AddListener(() => StartCoroutine(CorrectAnswer()));
         _incorrectButton.onClick.AddListener(() => StartCoroutine(IncorrectAnswer()));
 
+
         _correctButton.gameObject.SetActive(false);
         _incorrectButton.gameObject.SetActive(false);
     }
+
 
 
     private void ToggleAnswerVisibility()
