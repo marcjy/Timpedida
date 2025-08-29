@@ -69,7 +69,7 @@ public class OpenQuestionManager : MonoBehaviour
 
     public IEnumerator Play()
     {
-        if (_openQuestionData.Any(data => data.IsUsed() == false))
+        if (AreQuestionsLeft())
         {
             _isRoundComplete = false;
             _roundsPlayed = 0;
@@ -159,7 +159,7 @@ public class OpenQuestionManager : MonoBehaviour
     {
         _quizContainer.SetActive(true);
 
-        while (_roundsPlayed < MAX_ROUNDS)
+        while (_roundsPlayed < MAX_ROUNDS && AreQuestionsLeft())
         {
             RoundStart();
             yield return RoundPlaying();
@@ -210,4 +210,6 @@ public class OpenQuestionManager : MonoBehaviour
 
         Destroy(animator.gameObject, animationDuration);
     }
+
+    private bool AreQuestionsLeft() => _openQuestionData.Any((d) => d.IsUsed() == false);
 }

@@ -26,8 +26,9 @@ public class AudioManager : MonoBehaviour
 
         _audioSourceBMG = new GameObject("AudioSourceBGM").AddComponent<AudioSource>();
         _audioSourceBMG.gameObject.transform.SetParent(gameObject.transform);
-        _audioSourceBMG.loop = true;
+        _audioSourceBMG.loop = false;
         _audioSourceBMG.playOnAwake = true;
+        _audioSourceBMG.volume = 0.25f;
 
         DontDestroyOnLoad(gameObject);
     }
@@ -72,16 +73,14 @@ public class AudioManager : MonoBehaviour
     {
         int clipsIndex = 0;
         int nClips = _bgmClips.Length;
-        float clipDuration;
 
         while (_isBGMEnabled)
         {
             _audioSourceBMG.clip = _bgmClips[clipsIndex];
             _audioSourceBMG.Play();
 
-            clipDuration = _audioSourceBMG.clip.length;
-
-            yield return new WaitForSeconds(clipDuration + _waitSecondsBetweenClips);
+            yield return new WaitWhile(() => _audioSourceBMG.isPlaying);
+            yield return new WaitForSeconds(_waitSecondsBetweenClips);
 
             clipsIndex = (clipsIndex + 1) % nClips;
         }

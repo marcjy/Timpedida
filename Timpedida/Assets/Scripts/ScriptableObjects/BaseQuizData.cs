@@ -9,6 +9,7 @@ public abstract class BaseQuizData : ScriptableObject
     [TextArea(2, 5)]
     public string Answer;
 
+    [SerializeField]
     private string _id;
     private bool _used;
 

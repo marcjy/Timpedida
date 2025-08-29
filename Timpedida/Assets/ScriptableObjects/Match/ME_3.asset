@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ME_3
   m_EditorClassIdentifier: 
   Question: Panamanian Petting Zoo
-  Answer: "Pareja recoge las nueces y el ma\xEDz de sus heces. La pareja presenta
-    entonces las nueces y el ma\xEDz en una taza o un plato. A continuaci\xF3n, uno
-    lanza las nueces y el ma\xEDz a la cama, donde la pareja se los come."
+  Answer: "Pareja recoge las nueces y el ma\xEDz de sus heces y las guarda en una
+    taza. A continuaci\xF3n, lanza las nueces y el ma\xEDz a la cama y la pareja
+    se los come."
+  _id: b922d1be-f7dc-44c0-ab90-f4cb7f3fe78b
   TermType: 2

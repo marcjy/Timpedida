@@ -27,6 +27,7 @@ public class MatchTermButton : MonoBehaviour
     {
         _button.onClick.AddListener(() =>
         {
+            Debug.Log("Button clicked, id:" + _termId);
             OnPressed?.Invoke(this, _termId);
             PressButtonSprite();
         });

@@ -210,13 +210,19 @@ public class MatchTermManager : MonoBehaviour
 
     private void CheckIfMatchIsCorrect()
     {
+        Debug.Log("Called CheckIfMatchIsCorrect");
+        Debug.Log("TermdId" + _termIdChoosen);
+        Debug.Log("DescriptionId" + _definitionIdChoosen);
+
         if (!String.IsNullOrEmpty(_termIdChoosen) && !String.IsNullOrEmpty(_definitionIdChoosen))
         {
             _matchIsCorrect = _termIdChoosen == _definitionIdChoosen;
 
             if (_matchIsCorrect)
                 _correctMatches++;
+            Debug.Log("Match is" + _matchIsCorrect);
 
+            Debug.Log("Disabling correct buttons");
             //Disable correct buttons
             _terms
                 .FirstOrDefault(b => b.GetId() == _termIdChoosen)
@@ -224,12 +230,16 @@ public class MatchTermManager : MonoBehaviour
             _definitions
                 .FirstOrDefault(b => b.GetId() == _definitionIdChoosen)
                 .DisableButton();
+            Debug.Log("Disabled");
 
             _termIdChoosen = string.Empty;
             _definitionIdChoosen = string.Empty;
 
+
+            Debug.Log("Enabling canvases");
             _nameCanvas.interactable = true;
             _descriptionCanvas.interactable = true;
+            Debug.Log("Enabled");
 
         }
     }

@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     {
         ResetQuizDataUsed();
 
+        Debug.Log("----First Id----" + _quizData.OfType<MatchData>().FirstOrDefault().GetId());
+
         _openQuestionManager.Init(_quizData.OfType<OpenQuestionData>().ToArray());
         _matchTermManager.Init(_quizData.OfType<MatchData>().ToArray());
 

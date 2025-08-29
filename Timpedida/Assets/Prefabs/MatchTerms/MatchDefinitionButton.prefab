@@ -136,7 +136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultSprite: {fileID: -1257769187640015746, guid: 9127f7cef1419b8409d81d98f4a59fec, type: 3}
   _pressedSprite: {fileID: 2527607607167286074, guid: 9127f7cef1419b8409d81d98f4a59fec, type: 3}
-  _textTransform: {fileID: 6597547606059225234}
   _text: {fileID: 8083717754071501792}
 --- !u!1 &6117065161852129659
 GameObject:
@@ -203,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AAAAAA
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -212,8 +211,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294916864
-  m_fontColor: {r: 0, g: 0.23137255, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
